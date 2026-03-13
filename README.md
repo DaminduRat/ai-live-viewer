@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="banner.png" alt="AI Live Viewer Banner" width="100%">
-</p>
+
 
 # 🌙 AI Live Viewer
 
