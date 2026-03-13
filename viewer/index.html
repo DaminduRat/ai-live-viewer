@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Live Viewer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-mode">
+  <div class="app-container">
+    <!-- Sidebar for History -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2>Chats History</h2>
+      </div>
+      <div class="sidebar-content" id="history-list">
+        <!-- Dynamically populated by db.js -->
+      </div>
+      <div class="sidebar-footer">
+        <span>Built late at night by Damindu 🌙</span>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <!-- Toolbar -->
+      <header class="toolbar">
+        <div class="toolbar-left">
+          <span class="topic-title" id="current-topic">Loading...</span>
+        </div>
+        <div class="toolbar-right">
+          <button id="btn-zoom-out" class="icon-btn" title="Zoom Out">-</button>
+          <button id="btn-zoom-in" class="icon-btn" title="Zoom In">+</button>
+          <button id="btn-theme" class="icon-btn" title="Toggle Light/Dark Theme">🌓</button>
+          <div class="divider"></div>
+          <button id="btn-export-pdf" class="btn primary">PDF</button>
+          <button id="btn-export-doc" class="btn secondary">DOC</button>
+        </div>
+      </header>
+
+      <!-- Editor Area -->
+      <div class="editor-wrapper" id="editor-wrapper">
+        <div id="editor" class="editor" contenteditable="true" spellcheck="false" placeholder="Waiting for AI response...">
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="dexie.min.js"></script>
+  <script src="html2pdf.bundle.min.js"></script>
+  <script src="db.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
